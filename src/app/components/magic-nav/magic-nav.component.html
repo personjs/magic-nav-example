@@ -1,0 +1,11 @@
+<ul class="menu">
+    <div class="toggle" (click)="toggleMenu()">
+        <ion-icon name="add-outline"></ion-icon>
+    </div>
+    <li *ngFor="let link of links; let i=index" [style]="'--i:' + i + ';'" [class]="isRouteActive(link)">
+        <a [routerLink]="link.href">
+            <ion-icon [name]="link.icon"></ion-icon>
+        </a>
+    </li>
+    <div class="indicator"></div>
+</ul>
